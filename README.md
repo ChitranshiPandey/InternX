@@ -95,3 +95,22 @@ Project: InternX
 
 ## 📜 License
 This project is open-source and available for learning and development purposes.
+## 📸 UI & Workflow Screenshots
+
+### 🏠 Home Page
+![Home Page](screenshots/home.png)
+
+### 📝 Sign Up Page
+![Sign Up Page](screenshots/signup.png)
+
+### 💼 Internship Recommendations
+![Internship Page](screenshots/internship.png)
+
+### 🔄 InternX Workflow
+![Workflow Diagram](screenshots/process.png)
+
+<p align="center">
+  <img src="screenshots/process.png" width="900" />
+</p>
+
+
