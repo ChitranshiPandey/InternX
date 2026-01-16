@@ -24,43 +24,7 @@ const Skills = () => {
   return (
     <div className="min-h-screen bg-[#F8FAFC]">
 
-      {/* HEADER */}
-      <header className="relative flex items-center px-10 py-5 bg-white border-b">
-        {/* Logo - Left */}
-        <div
-          onClick={() => navigate("/")}
-          className="flex items-center gap-2 cursor-pointer"
-        >
-          <div className="w-9 h-9 rounded-lg bg-[#0F2A44] flex items-center justify-center text-white font-bold">
-            🎒
-          </div>
-          <h1 className="text-lg font-semibold text-[#0F2A44]">
-            InternX<span className="text-gray-400 font-normal">Powered by AI</span>
-          </h1>
-        </div>
-
-        {/* Center Navigation */}
-        <nav className="absolute left-1/2 -translate-x-1/2 hidden md:flex gap-8 text-sm text-gray-600">
-          <button
-            onClick={() => navigate("/")}
-            className="transition-colors hover:text-[#F97316]"
-          >
-            Home
-          </button>
-          <button
-            onClick={() => navigate("/about")}
-            className="transition-colors hover:text-[#F97316]"
-          >
-            About
-          </button>
-          <button
-            onClick={() => navigate("/contact")}
-            className="transition-colors hover:text-[#F97316]"
-          >
-            Contact
-          </button>
-        </nav>
-      </header>
+      
 
       {/* CONTENT */}
       <div className="flex justify-center pt-12 px-4">

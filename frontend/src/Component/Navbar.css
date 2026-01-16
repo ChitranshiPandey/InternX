@@ -1,0 +1,179 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  /* Gradient effect */
+  background: linear-gradient(90deg, #0F2A44, #1A3B5D);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+/* Links */
+.nav-links span {
+  margin: 0 20px; /* More space between links */
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links span:hover {
+  color: #FFA31A; /* Accent color on hover */
+}
+
+/* Sign-in button */
+.signin-btn {
+  background-color: #FFA31A; /* Orange button to contrast blue navbar */
+  color: white;
+  padding: 10px 22px;
+  border-radius: 12px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.signin-btn:hover {
+  opacity: 0.95;
+  box-shadow: 0 6px 18px rgba(255,163,26,0.4);
+}
+
+
+.navbar {
+  position: relative;
+  z-index: 50;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* normal plane nav bar  */
+
+/* .navbar {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f2a44;
+}
+
+.logo span {
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b7280;
+  margin-left: 6px;
+}
+
+.nav-links span {
+  margin: 0 16px;
+  cursor: pointer;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.nav-links span:hover {
+  color: #0f2a44;
+}
+
+.signin-btn {
+  background: #0f2a44;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 60px;
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0b1f3a;
+}
+
+.navbar-center span {
+  margin: 0 16px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #5a6b85;
+}
+
+.navbar-center span:hover {
+  color: #0b1f3a;
+}
+
+.signin-btn {
+  background: #0b1f3a;
+  color: #ffffff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 22px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.signin-btn:hover {
+  opacity: 0.9;
+} */

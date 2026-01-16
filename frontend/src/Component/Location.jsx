@@ -41,33 +41,7 @@ const Location = () => {
 
   return (
     <div className="min-h-screen bg-[#F8FAFC]">
-      {/* Header */}
-      <header className="flex items-center justify-between px-10 py-5 bg-white border-b">
-        <div
-          className="text-xl font-semibold text-[#0F172A] cursor-pointer"
-          onClick={() => navigate("/")}
-        >
-        <span className="font-semibold text-[#0F2A44]">
-            InternX <span className="text-sm text-gray-500">Powered by AI</span>
-          </span>
-        </div>
-
-       <nav className="absolute left-1/2 -translate-x-1/2 flex gap-8 text-sm text-gray-600">
-  <button
-    onClick={() => navigate("/")}
-    className="transition-colors hover:text-[#F97316]"
-  >
-    Home
-  </button>
-  <button
-    onClick={() => navigate("/about")}
-    className="transition-colors hover:text-[#F97316]"
-  >
-    About
-  </button>
-</nav>
-
-      </header>
+      
 
       {/* Content */}
       <div className="max-w-4xl mx-auto mt-10 bg-white p-10 rounded-xl shadow-sm">

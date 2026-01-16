@@ -1,5 +1,3 @@
-
-
 @import "tailwindcss";
 
 /* Global gradient background */
@@ -12,4 +10,5 @@ body, #root {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 

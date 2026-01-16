@@ -1,52 +1,19 @@
 import React from "react";
 import { useNavigate, Link } from "react-router-dom";
+import GoogleLogin from "./Auth/GoogleLogin";
+import ChatButton from "./Assistant/ChatButton";
+
+
+
 
 const Home = () => {
   const navigate = useNavigate();
 
-  
 
   return (
     <div className="relative min-h-screen bg-[#F8FAFC] overflow-hidden">
       {/* Navbar */}
-      <header className="flex items-center justify-between px-10 py-5">
-        <div className="flex items-center gap-2">
-          <div className="w-9 h-9 bg-[#0F2A44] rounded-lg flex items-center justify-center text-white font-bold">
-            🎓
-          </div>
-          <span className="font-semibold text-[#0F2A44]">
-            InternX <span className="text-sm text-gray-500">Powered by AI</span>
-          </span>
-        </div>
-
-        {/* Navbar Links */}
-        <nav className="hidden md:flex gap-8 text-sm font-medium text-[#0F2A44]">
-          <Link to="/" className="hover:text-[#FFA31A]">Home</Link>
-          <Link to="/about" className="hover:text-[#FFA31A]">About</Link>
-          <Link to="/contact" className="hover:text-[#FFA31A]">Contact</Link>
-        </nav>
-
-        <div className="flex items-center gap-4">
-  <button className="text-sm text-[#0F2A44]">🌐 English</button>
-
-  {/* Sign Up Button */}
-  <button
-    onClick={() => navigate("/signup")}
-    className="border border-[#0F2A44] text-[#0F2A44] px-5 py-2 rounded-xl text-sm font-semibold hover:bg-[#0F2A44] hover:text-white transition"
-  >
-    Sign Up / Create Profile
-  </button>
-
-  {/* Existing Get Started Button */}
-  <button
-    onClick={() => navigate("/onboarding/education")}
-    className="bg-[#0F2A44] text-white px-5 py-2 rounded-xl text-sm font-semibold"
-  >
-    Get Started
-  </button>
-</div>
-
-      </header>
+      
 
     
       {/* Hero Section */}
@@ -67,7 +34,7 @@ const Home = () => {
           AI-powered recommendations tailored to your skills, education, and interests
         </p>
 
-        {/* CTA Buttons */}
+ {/* CTA Buttons */}
         <div className="mt-10 flex gap-4">
           <button
             onClick={() => navigate("/onboarding/education")}
@@ -80,13 +47,16 @@ const Home = () => {
             Learn More
           </button>
         </div>
+
       </main>
 
       {/* Stats + Why Choose Section */}
-<section className="bg-[#FFF9F2] py-20">
+{/* <section className="bg-[#FFF9F2] py-20"> */}
+  <section className="py-20 bg-gradient-to-br from-[#F8FAFF] to-[#FFF7ED]">
+
 
   {/* Stats */}
-  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-center mb-20 px-6">
+  {/* <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-center mb-20 px-6">
     
     <div>
       <div className="mx-auto mb-4 w-12 h-12 rounded-xl bg-[#EEF2FF] flex items-center justify-center text-[#1E3A8A] text-xl">
@@ -112,22 +82,49 @@ const Home = () => {
       <p className="text-[#64748B] mt-1">Students Placed</p>
     </div>
 
-  </div>
+  </div> */}
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center mb-20">
+  {[
+    { value: "10,000+", label: "Internships Available", color: "text-blue-600" },
+    { value: "500+", label: "Partner Companies", color: "text-orange-500" },
+    { value: "50,000+", label: "Students Placed", color: "text-green-500" },
+  ].map((item, i) => (
+    <div
+      key={i}
+      className="bg-white/70 backdrop-blur-xl rounded-2xl shadow-lg p-8 hover:scale-105 transition-all duration-300"
+    >
+      <h2 className={`text-4xl font-bold ${item.color}`}>
+        {item.value}
+      </h2>
+      <p className="text-gray-600 mt-2">{item.label}</p>
+    </div>
+  ))}
+</div>
+
 
   {/* Why Choose */}
   <div className="max-w-6xl mx-auto text-center px-6">
-    <h2 className="text-4xl font-bold text-[#111827] mb-4">
+    {/* <h2 className="text-4xl font-bold text-[#111827] mb-4">
       Why Choose InternX?
     </h2>
 
     <p className="text-[#64748B] max-w-2xl mx-auto mb-14">
       We connect talented students across India with quality internship opportunities
-    </p>
+    </p> */}
+    <h2 className="text-4xl font-bold text-center text-slate-900 mb-4">
+  Why Choose <span className="text-blue-600">InternX</span>?
+</h2>
+<p className="text-center text-gray-600 mb-14 max-w-2xl mx-auto">
+  We connect talented students across India with verified, high-quality internship opportunities.
+</p>
+
 
     {/* Cards */}
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8"> */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
 
-      <div className="bg-white rounded-2xl p-8 border hover:shadow-md transition">
+
+      {/* <div className="bg-white rounded-2xl p-8 border hover:shadow-md transition">
         <div className="w-12 h-12 mb-4 rounded-xl bg-[#FFF3E0] flex items-center justify-center text-[#FFA31A] text-xl">
           ✨
         </div>
@@ -135,9 +132,21 @@ const Home = () => {
         <p className="text-sm text-[#64748B]">
           Our intelligent algorithm matches you with internships based on your unique profile.
         </p>
-      </div>
+      </div> */}
+      <div className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-2xl transition-all duration-300 border border-blue-100">
+  <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-blue-100 text-blue-600 text-2xl mb-6 group-hover:scale-110 transition">
+    ✨
+  </div>
+  <h3 className="text-xl font-semibold text-slate-900 mb-3">
+    AI-Powered Matching
+  </h3>
+  <p className="text-gray-600">
+    Smart algorithms match you with internships based on your skills and interests.
+  </p>
+</div>
 
-      <div className="bg-white rounded-2xl p-8 border hover:shadow-md transition">
+
+      {/* <div className="bg-white rounded-2xl p-8 border hover:shadow-md transition">
         <div className="w-12 h-12 mb-4 rounded-xl bg-[#FFF3E0] flex items-center justify-center text-[#FFA31A] text-xl">
           🛡️
         </div>
@@ -145,8 +154,21 @@ const Home = () => {
         <p className="text-sm text-[#64748B]">
           All internships are from trusted organizations partnered with the government.
         </p>
-      </div>
+      </div> */}
 
+      <div className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-2xl transition-all duration-300 border border-green-100">
+  <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-green-100 text-green-600 text-2xl mb-6 group-hover:scale-110 transition">
+    🛡️
+  </div>
+  <h3 className="text-xl font-semibold text-slate-900 mb-3">
+    Verified Opportunities
+  </h3>
+  <p className="text-gray-600">
+    All internships are verified and partnered with trusted organizations.
+  </p>
+</div>
+
+{/* 
       <div className="bg-white rounded-2xl p-8 border hover:shadow-md transition">
         <div className="w-12 h-12 mb-4 rounded-xl bg-[#FFF3E0] flex items-center justify-center text-[#FFA31A] text-xl">
           ✅
@@ -155,7 +177,19 @@ const Home = () => {
         <p className="text-sm text-[#64748B]">
           Apply to multiple internships with just a few clicks.
         </p>
-      </div>
+      </div> */}
+      <div className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-2xl transition-all duration-300 border border-orange-100">
+  <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-orange-100 text-orange-600 text-2xl mb-6 group-hover:scale-110 transition">
+    ✅
+  </div>
+  <h3 className="text-xl font-semibold text-slate-900 mb-3">
+    Easy Application
+  </h3>
+  <p className="text-gray-600">
+    Apply to multiple internships with just a few clicks.
+  </p>
+</div>
+
 
     </div>
   </div>
@@ -216,12 +250,18 @@ const Home = () => {
     © 2026 InternX. All rights reserved.
   </div>
 </footer>
+{/* AI Assistant */}
+      <ChatButton />
+
 
      
 
     
 
     </div>
+        
+      
+
   );
 };
 
