@@ -39,6 +39,8 @@ function App() {
         <Route path="/auth" element={<AuthPage />} />
         <Route path="/dashboard" element={<Dashboard />} />{" "}
         <Route path="/chat" element={<Chat />} />
+       
+
 
         <Route path="/placements" element={<Placements />} />
         <Route path="/placements/campus" element={<Campus />} />
