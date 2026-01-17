@@ -11,21 +11,20 @@ import Interests from "./Component/Interests";
 import Location from "./Component/Location";
 import Signup from "./Component/Signup";
 import AuthPage from "./Component/Auth/AuthPage";
+import Placements from "./Component/Placements";
 import Dashboard from "./Component/Dashboard"; // <-- import dashboard
 import Chat from "./Component/Assistant/Chat";
 
-
-
-
-
 import ChatButton from "./Component/Assistant/ChatButton"; // ✅ ADD THIS
-
+import Campus from "./Component/Campus";
+import OffCampus from "./Component/OffCampus";
+import Internship from "./Component/Internship";
+import Startup from "./Component/Startup";
 
 function App() {
   return (
     <>
-      <Navbar />  {/* Always visible top nav */}
-
+      <Navbar /> {/* Always visible top nav */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -37,30 +36,20 @@ function App() {
         <Route path="/location" element={<Location />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/auth" element={<AuthPage />} />
-        <Route path="/dashboard" element={<Dashboard />} />  {/* <-- add route */}
+        <Route path="/dashboard" element={<Dashboard />} />{" "}
         <Route path="/chat" element={<Chat />} />
-
-
-          
-
+        <Route path="/placements" element={<Placements />} />
+        <Route path="/placements/campus" element={<Campus />} />
+        <Route path="/placements/off-campus" element={<OffCampus />} />
+        <Route path="/placements/internship" element={<Internship />} />
+        <Route path="/placements/startup" element={<Startup />} />
       </Routes>
-
-       <ChatButton /> {/* ✅ ADD THIS */}
+      <ChatButton /> {/* ✅ ADD THIS */}
     </>
   );
 }
 
 export default App;
-
-
-
-
-
-
-
-
-
-
 
 // import React from "react";
 // import { Routes, Route } from "react-router-dom";
@@ -77,13 +66,9 @@ export default App;
 // import Signup from "./Component/Signup";
 // import AuthPage from "./Component/Auth/AuthPage";
 
-
-
-
-
 // function App() {
 //   return (
-    
+
 //     <Routes>
 //       <Route path="/" element={<Home />} />
 //       <Route path="/about" element={<About />} />
@@ -96,15 +81,9 @@ export default App;
 //       <Route path="/signup" element={<Signup />} />
 //       <Route path="/auth" element={<AuthPage />} />
 
-  
-
 //     </Routes>
- 
+
 //   );
 // }
 
 // export default App;
-
-
-
-
