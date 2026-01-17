@@ -14,6 +14,7 @@ import AuthPage from "./Component/Auth/AuthPage";
 import Placements from "./Component/Placements";
 import Dashboard from "./Component/Dashboard"; // <-- import dashboard
 import Chat from "./Component/Assistant/Chat";
+import Resume from "./Component/Resume";
 
 import ChatButton from "./Component/Assistant/ChatButton"; // ✅ ADD THIS
 import Campus from "./Component/Campus";
@@ -38,11 +39,19 @@ function App() {
         <Route path="/auth" element={<AuthPage />} />
         <Route path="/dashboard" element={<Dashboard />} />{" "}
         <Route path="/chat" element={<Chat />} />
+
         <Route path="/placements" element={<Placements />} />
         <Route path="/placements/campus" element={<Campus />} />
         <Route path="/placements/off-campus" element={<OffCampus />} />
         <Route path="/placements/internship" element={<Internship />} />
         <Route path="/placements/startup" element={<Startup />} />
+
+        <Route path="/resume" element={<Resume />} />
+
+
+          
+
+
       </Routes>
       <ChatButton /> {/* ✅ ADD THIS */}
     </>
