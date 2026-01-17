@@ -13,6 +13,7 @@ import Signup from "./Component/Signup";
 import AuthPage from "./Component/Auth/AuthPage";
 import Dashboard from "./Component/Dashboard"; // <-- import dashboard
 import Chat from "./Component/Assistant/Chat";
+import Resume from "./Component/Resume";
 
 
 
@@ -39,6 +40,7 @@ function App() {
         <Route path="/auth" element={<AuthPage />} />
         <Route path="/dashboard" element={<Dashboard />} />  {/* <-- add route */}
         <Route path="/chat" element={<Chat />} />
+        <Route path="/resume" element={<Resume />} />
 
 
           

@@ -2,9 +2,13 @@ import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import NotificationBell from "./Notifications/NotificationBell";
 
-
 const Navbar = () => {
   const navigate = useNavigate();
+
+  const handleAboutClick = () => {
+    // Navigate to home page with hash
+    navigate("/#why-choose");
+  };
 
   return (
     <nav className="navbar px-6 md:px-10">
@@ -24,36 +28,119 @@ const Navbar = () => {
         <span onClick={() => navigate("/dashboard")} className="cursor-pointer text-yellow-400 font-semibold">
           Dashboard
         </span>
-        <span onClick={() => navigate("/about")} className="cursor-pointer">About</span>
+        <span onClick={handleAboutClick} className="cursor-pointer">About</span>
         <span className="cursor-pointer">Contact</span>
       </div>
 
-     <div className="flex items-center gap-6">
-  <button className="text-sm text-white">🌐 English</button>
+      <div className="flex items-center gap-6">
+        <button className="text-sm text-white">🌐 English</button>
 
-  <button
-    onClick={() => navigate("/chat")}
-    className="px-4 py-2 rounded-full bg-purple-600 text-white text-sm hover:bg-purple-700"
-  >
-    🤖 Chat AI
-  </button>
+        <button
+          onClick={() => navigate("/chat")}
+          className="px-4 py-2 rounded-full bg-purple-600 text-white text-sm hover:bg-purple-700"
+        >
+          🤖 Chat AI
+        </button>
 
-  <NotificationBell />
+        <NotificationBell />
 
-  <button
-    onClick={() => navigate("/auth")}
-    className="signin-btn"
-  >
-    Sign In
-  </button>
-</div>
-
-
+        <button
+          onClick={() => navigate("/auth")}
+          className="signin-btn"
+        >
+          Sign In
+        </button>
+      </div>
     </nav>
   );
 };
 
 export default Navbar;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { useNavigate } from "react-router-dom";
+// import "./Navbar.css";
+// import NotificationBell from "./Notifications/NotificationBell";
+
+
+// const Navbar = () => {
+//   const navigate = useNavigate();
+
+//   return (
+//     <nav className="navbar px-6 md:px-10">
+//       {/* Logo */}
+//       <div className="flex items-center gap-2">
+//         <div className="w-9 h-9 bg-[#0F2A44] rounded-lg flex items-center justify-center text-white font-bold text-lg">
+//           🎓
+//         </div>
+//         <span className="font-semibold text-white text-lg">
+//           InternX <span className="text-sm text-white/80">Powered by AI</span>
+//         </span>
+//       </div>
+
+//       {/* Links */}
+//       <div className="hidden md:flex gap-10 text-sm font-medium nav-links">
+//         <span onClick={() => navigate("/")} className="cursor-pointer">Home</span>
+//         <span onClick={() => navigate("/dashboard")} className="cursor-pointer text-yellow-400 font-semibold">
+//           Dashboard
+//         </span>
+//         <span onClick={() => navigate("/about")} className="cursor-pointer">About</span>
+//         <span className="cursor-pointer">Contact</span>
+//       </div>
+
+//      <div className="flex items-center gap-6">
+//   <button className="text-sm text-white">🌐 English</button>
+
+//   <button
+//     onClick={() => navigate("/chat")}
+//     className="px-4 py-2 rounded-full bg-purple-600 text-white text-sm hover:bg-purple-700"
+//   >
+//     🤖 Chat AI
+//   </button>
+
+//   <NotificationBell />
+
+//   <button
+//     onClick={() => navigate("/auth")}
+//     className="signin-btn"
+//   >
+//     Sign In
+//   </button>
+// </div>
+
+
+//     </nav>
+//   );
+// };
+
+// export default Navbar;
 
 
 
