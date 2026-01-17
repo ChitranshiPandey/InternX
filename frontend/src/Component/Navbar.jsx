@@ -23,15 +23,64 @@ const Navbar = () => {
       </div>
 
       {/* Links */}
-      <div className="hidden md:flex gap-10 text-sm font-medium nav-links">
+      {/* <div className="hidden md:flex gap-10 text-sm font-medium nav-links">
         <span onClick={() => navigate("/")} className="cursor-pointer">Home</span>
         <span onClick={() => navigate("/dashboard")} className="cursor-pointer text-yellow-400 font-semibold">
           Dashboard
         </span>
         <span onClick={handleAboutClick} className="cursor-pointer">About</span>
         <span className="cursor-pointer">Contact</span>
+      </div> */}
+      <div className="hidden md:flex gap- 3 text-sm font-medium nav-links">
+        <span
+          onClick={() => navigate("/")}
+          className="cursor-pointer hover:text-yellow-400 transition"
+        >
+          Home
+        </span>
+
+        <span
+          onClick={() => navigate("/dashboard")}
+          className="cursor-pointer text-yellow-400 font-semibold"
+        >
+          Dashboard
+        </span>
+
+        <span
+          onClick={() => navigate("/placements")}
+          className="cursor-pointer hover:text-yellow-400 transition"
+        >
+          Placements
+        </span>
+
+        <span
+          onClick={() => navigate("/about")}
+          className="cursor-pointer hover:text-yellow-400 transition"
+        >
+          About
+        </span>
+
+        <span
+          onClick={() => navigate("/contact")}
+          className="cursor-pointer hover:text-yellow-400 transition"
+        >
+          Contact
+        </span>
       </div>
 
+      <div className="flex items-center gap-6">
+        <button className="text-sm text-white">🌐 English</button>
+
+        <button
+          onClick={() => navigate("/chat")}
+          className="px-4 py-2 rounded-full bg-purple-600 text-white text-sm hover:bg-purple-700"
+        >
+          🤖 Chat AI
+        </button>
+
+        <NotificationBell />
+
+        <button onClick={() => navigate("/auth")} className="signin-btn">
       <div className="flex items-center gap-6">
         <button className="text-sm text-white">🌐 English</button>
 
@@ -171,7 +220,6 @@ export default Navbar;
 // import { useNavigate } from "react-router-dom";
 // import "./Navbar.css";
 
-
 // const Navbar = () => {
 //   const navigate = useNavigate();
 
@@ -210,42 +258,7 @@ export default Navbar;
 
 // export default Navbar;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//normal plane nav bar 
+//normal plane nav bar
 
 // import { useNavigate } from "react-router-dom";
 // import "./Navbar.css";
@@ -288,27 +301,6 @@ export default Navbar;
 
 // export default Navbar;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // import { useNavigate } from "react-router-dom";
 // import "./Navbar.css";
 
@@ -349,21 +341,6 @@ export default Navbar;
 // };
 
 // export default Navbar;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import { useNavigate } from "react-router-dom";
 // import "./Navbar.css";
@@ -406,27 +383,6 @@ export default Navbar;
 
 // export default Navbar;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // import { useNavigate } from "react-router-dom";
 // import "./Navbar.css";
 
@@ -468,25 +424,6 @@ export default Navbar;
 
 // export default Navbar;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // import { useNavigate } from "react-router-dom";
 // import "./Navbar.css";
 
@@ -516,4 +453,3 @@ export default Navbar;
 // };
 
 // export default Navbar;
-
